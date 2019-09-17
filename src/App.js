@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ThemeProvider } from 'emotion-theming'
+import theme from '@rebass/preset'
+import CountriesList from './CountriesList'
+import { Box } from 'rebass'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <h1>A-aa-aa- ...'m hooked on a feeling!</h1>
+      <CountriesList />
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
